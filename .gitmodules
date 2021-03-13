@@ -1,0 +1,3 @@
+[submodule "js/system/debugpp"]
+	path = js/system/debugpp
+	url = https://github.com/mprinc/debugpp
