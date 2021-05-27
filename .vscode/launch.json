@@ -1,0 +1,34 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "pwa-node",
+			"request": "launch",
+			"name": "debugpp - test",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+
+			"runtimeExecutable": "node",
+			"runtimeArgs": [
+				"--nolazy",
+				"-r", "ts-node/register",
+				"-r", "tsconfig-paths/register",
+			],
+            "internalConsoleOptions": "openOnSessionStart",
+            "program": "${workspaceFolder}/js/system/debugpp/node_modules/.bin/_mocha",
+
+            "cwd": "${workspaceFolder}/js/system/debugpp",
+			"env": {
+			  "NODE_ENV": "development",
+			//   "TS_NODE_PROJECT": "${workspaceFolder}/colabo/src/tools/tsconfig.json"
+			},
+            "args": [
+                "test/namespacing.spec.js",
+			],
+		}
+	]
+}
