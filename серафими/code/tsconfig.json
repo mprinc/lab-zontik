@@ -1,0 +1,35 @@
+{
+	"extends": "./tsconfig.colabo.json",
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+		// "strict": true,
+        "moduleResolution": "node",
+        "preserveConstEnums": true,
+		"emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "listFiles": false,
+        "lib": [
+            "esnext",
+            "dom"
+        ],
+		"baseUrl": "./",
+		"outDir": "dist",
+		// "traceResolution": true,
+		// "listFilesOnly": true,
+		"preserveSymlinks": true,
+		"esModuleInterop": true,
+    },
+    "allowSyntheticDefaultImports": true,
+  "files": [
+    "index.ts",
+    // "inject-version.ts"
+  ],
+//   "include": [
+// 	  "node_modules/@colabo-tool/**/*"
+//   ],
+//   "exclude": ["**/*d.ts"],
+  "compileOnSave": false
+}

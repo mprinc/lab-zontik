@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+		"baseUrl": ".",
+		"preserveSymlinks": true,
+		"paths": {
+    "@colabo-flow/i-core": [
+        "/Users/mprinc/.config/yarn/global/node_modules/@colabo-flow/i-core"
+    ],
+    "@colabo-headless/i-core": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/puzzles/headless/core-backend"
+    ],
+    "@colabo-headless/i-core/*": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/puzzles/headless/core-backend/*"
+    ],
+    "@colabo-tool/c-core": [
+        "/Users/mprinc/.config/yarn/global/node_modules/@colabo-tool/c-core"
+    ],
+    "@colabo-utils/i-verify": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/dev_puzzles/utils/verify"
+    ],
+    "@colabo-tool/c-codemod": [
+        "/Users/mprinc/.config/yarn/global/node_modules/@colabo-tool/c-codemod"
+    ],
+    "@colabo-knalledge/i-core-services": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/puzzles/knalledge/core-services"
+    ],
+    "@colabo-dialogue/i-ibis": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/puzzles/dialogue/ibis"
+    ],
+    "@colabo-knalledge/i-core": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/puzzles/knalledge/core"
+    ],
+    "@colabo-utils/i-notifications": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/dev_puzzles/utils/notifications"
+    ],
+    "@colabo-transform/i-json": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/isomorphic/puzzles/transform/json"
+    ],
+    "@colabo-transform/b-json": [
+        "/Users/mprinc/data/development/colabo-zontik/colabo/src/backend/puzzles/transform/json"
+    ],
+    "*": [
+        "node_modules/*"
+    ]
+},
+	},
+}

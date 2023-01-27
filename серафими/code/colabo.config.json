@@ -1,0 +1,52 @@
+{
+	"version": "1.0.0",
+	"schemaVersion": "1.0.0",
+	"name": "b-colabo.space",
+	"description": "Colabo.space ecosystem - backend",
+	"variables": {
+	},
+	"params": {
+		"project": {
+			"tags": ["node"]
+		},
+		"dependencies": {
+			"provideDependencies": "link-path"
+		},
+		"environment": {
+			"os": "linux"
+		},
+			"sudo": {
+			"offer": false,
+			"install": false,
+			"build": false,
+			"symlinks": false
+		}
+	},
+    "puzzles": {
+        "dependencies": {
+			"@colabo-utils/i-config": {},
+			"@colabo-flow/i-core": {},
+			"@colabo-headless/i-core-backend": {
+				"aliasAs": "@colabo-headless/i-core",
+				"expandSubPaths": true
+			},
+			"@colabo-tool/c-core": {},
+			"@colabo-tool/c-puzzle": {},
+			"@colabo-utils/i-verify": {},
+			"@colabo-tool/c-puzzles": {},
+			"@colabo-tool/c-project": {},
+			"@colabo-tool/c-service": {},
+			"@colabo-tool/c-codemod": {},
+			"@colabo-tool/c-flow": {},
+			"@colabo-tool/integration-induct": {},
+			// required by the integration/induct puzzle
+			"@colabo-knalledge/i-core-services": {},
+			"@colabo-dialogue/i-ibis": {},
+			"@colabo-knalledge/i-core": {},
+			"@colabo-utils/i-notifications": {},
+			"@colabo-transform/i-json": {},
+			"@colabo-transform/b-json": {},
+        },
+        "offers": {}
+    }
+}
