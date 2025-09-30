@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drawing Learning Tool</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="app-header">
+        <h1>Drawing Learning Tool</h1>
+        <p class="tagline">Capture stylus or trackpad pressure, store vector strokes, and replay a child&apos;s drawing.</p>
+    </header>
+
+    <main class="app-layout">
+        <section class="canvas-panel">
+            <div class="canvas-wrapper">
+                <canvas id="drawing-canvas" aria-label="Drawing surface" role="img"></canvas>
+                <div class="hud" id="hud">
+                    <span id="pressure-label">Pressure: <strong id="pressure-value">0.00</strong></span>
+                    <span id="status-message"></span>
+                </div>
+            </div>
+            <footer class="hint">Use a stylus on a supported tablet. Pressure data appears as you draw.</footer>
+            <section class="log-panel" aria-live="polite" aria-label="Canvas interaction log">
+                <header>
+                    <h2>Canvas Console</h2>
+                </header>
+                <pre id="interaction-log" class="log-content" tabindex="0"></pre>
+            </section>
+        </section>
+
+        <aside class="control-panel">
+            <div class="toolbar">
+                <button id="undo-stroke" type="button">Undo Last Stroke</button>
+                <button id="clear-canvas" type="button">Clear</button>
+                <button id="replay-drawing" type="button">Replay</button>
+                <button id="download-json" type="button">Download JSON</button>
+            </div>
+
+            <section class="data-panel">
+                <header>
+                    <h2>Vector Data</h2>
+                    <p>Each stroke is recorded independently with per-point pressure and timing.</p>
+                </header>
+                <textarea id="vector-output" spellcheck="false" aria-label="Vector stroke output"></textarea>
+                <div class="data-actions">
+                    <button id="copy-json" type="button">Copy</button>
+                    <button id="load-json" type="button">Load From Text</button>
+                    <label class="file-input">
+                        <input id="file-loader" type="file" accept="application/json" />
+                        <span>Import JSON File</span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="notes-panel">
+                <h2>Workflow Tips</h2>
+                <ul>
+                    <li>Replay uses the original stroke timing to model the child&apos;s drawing rhythm.</li>
+                    <li>Vector data can be fed into analytics or another renderer for practice sessions.</li>
+                    <li>Keep strokes separate when exporting so they can be analyzed individually.</li>
+                    <li>Mac trackpads are supported—click-drag or Force Click to add pressure while drawing.</li>
+                </ul>
+            </section>
+        </aside>
+    </main>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
